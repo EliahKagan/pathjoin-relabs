@@ -11,7 +11,4 @@ fn main() {
         let path_str = path.to_str().expect("valid Unicode");
         println!("{:3}  relative? {:5}  absolute? {}", path_str, path.is_relative(), path.is_absolute());
     }
-
-    println!("{}", Path::new(r"\").join(r"\.\").to_str().expect("valid Unicode"));
-    println!("{}", Path::new(r"\\.\").is_absolute());
 }
