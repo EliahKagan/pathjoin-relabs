@@ -1,9 +1,9 @@
 # pathjoin-relabs - joining non-absolute paths to make an absolute path
 
-On Windows:
+This effect is specific to Windows. On Windows:
 
 - A path like `C:` or `C:foo` is not absolute, because while it specifies a drive, it is relative to the drive-specific current directory on that drive.
-- A path like `/` or `\`, or `/bar` or `\bar`, is not absolute, because while it specifies an absolute location on a drive, it does not specify that drive.
+- A path like `/` or `\`, or `/bar` or `\bar`, is (unlike on other operating systems) not absolute, because while it specifies an absolute location on a drive, it does not specify that drive.
 
 Such paths are relative paths in the [usual terminology](https://learn.microsoft.com/en-us/dotnet/standard/io/file-path-formats#traditional-dos-paths). Yet joining these non-absolute (i.e. relative) paths produces an absolute. For example, neither `C:` nor `\` is absolute, but joining them produces `C:\`, which is absolute.
 
