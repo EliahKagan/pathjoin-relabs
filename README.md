@@ -5,9 +5,11 @@ This effect is specific to Windows. On Windows:
 - A path like `C:` or `C:foo` is not absolute, because while it specifies a drive, it is relative to the drive-specific current directory on that drive.
 - A path like `/` or `\`, or `/bar` or `\bar`, is (unlike on other operating systems) not absolute, because while it specifies an absolute location on a drive, it does not specify that drive.
 
-Such paths are relative paths in the [usual terminology](https://learn.microsoft.com/en-us/dotnet/standard/io/file-path-formats#traditional-dos-paths). Yet joining these non-absolute (i.e. relative) paths produces an absolute. For example, neither `C:` nor `\` is absolute, but joining them produces `C:\`, which is absolute.
+Such paths are relative paths in the [usual terminology](https://learn.microsoft.com/en-us/dotnet/standard/io/file-path-formats#traditional-dos-paths). Yet joining these non-absolute (i.e. relative) paths produces an absolute path. For example, neither `C:` nor `\` is absolute, but joining them produces `C:\`, which is absolute.
 
-This repository contains [a Rust program](src/main.rs) that demonstrates this.
+In one sense, this may seem very obvious: of course joining `C:` and `\` produces `C:\`. But the effect that joining paths all of which are relative can produce a path that is absolute is moderately unintuitive, and for users coming from a Unix perspective, very unintuitive.
+
+This repository contains [a Rust program](src/main.rs) that demonstrates the effect.
 
 ## Output
 
