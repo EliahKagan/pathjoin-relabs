@@ -31,7 +31,7 @@ Speaking informally, what is happening is that `C:` is relative because only the
 
 This is no mere trick. It pertains to the semantics of joining paths *as paths*. It happens to be that, for example, `C:` and `\` also concatenate, as strings, to produce `C:\`. But that this is so is not relevant; what matters is that the operation of joining them as paths produces `C:\`.
 
-This is therefore dissimilar to non-examples such as how *string concatenation* of the valid relative paths `\` and `\.\` would produce the valid absolute path `\\.\` (which is valid because it designates the local [device namespace](https://learn.microsoft.com/en-us/dotnet/standard/io/file-path-formats#dos-device-paths)). Although string concatenation on `\` and `\.\` produce the string `\\.\`, joining `\` and `\.\` as paths just produces `\.\` itself, which is still relative.
+This is therefore dissimilar to non-examples such as how *string concatenation* of the valid relative paths `\` and `\.\` would produce the valid absolute path `\\.\` (which is valid because it designates the local [device namespace](https://learn.microsoft.com/en-us/dotnet/standard/io/file-path-formats#dos-device-paths)). Although string concatenation on `\` and `\.\` produces the string `\\.\`, joining `\` and `\.\` as paths just produces `\.\` itself, which is still relative.
 
 ## License
 
