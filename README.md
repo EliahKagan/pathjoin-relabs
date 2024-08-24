@@ -25,7 +25,7 @@ C:\  relative? false  absolute? true
 
 ## Intuitive explanation
 
-Speaking informally, what is happening is that `C:` is relative because only the drive it specifies is absolute, and `/` and `\` are relative on Windows because only the drive-relative location they specify is absolute. So `C:/` and `C:\` are absolute because the relative piece of each has been resolved using corresponding absolute information from the other.
+Speaking informally, what is happening is that `C:` is relative because only the drive it specifies is absolute, and `/` and `\` are relative on Windows because only the drive-relative location they specify is absolute. So `C:\` (or `C:/`) is absolute because the relative piece in each of `C:` and `\` (or `/`) has been resolved using corresponding absolute information from the other.
 
 ## A note on semantics
 
